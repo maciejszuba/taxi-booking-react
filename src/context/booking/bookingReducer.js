@@ -28,8 +28,9 @@ export default (state, action) => {
             return {
                 ...state,
                 bookingDetails: {
-                    date: action.payload.date
+                    date: action.payload.date,
                 }
+                
             }
 
         case SET_LOADING:

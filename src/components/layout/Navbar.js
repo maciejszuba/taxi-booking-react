@@ -1,9 +1,6 @@
 import React from 'react';
 
-//IMPORT ZNOWU NIE DZIAŁA
-import logo from '../../img/talixo_logo_2x.png';
-
-const Navbar = ({logo}) => {
+const Navbar = () => {
     return (
         <nav className='navbar container'>
             <img src={require('../../img/talixo_logo_2x.png')} alt="Talixo"/>
@@ -12,9 +9,4 @@ const Navbar = ({logo}) => {
         </nav>
     )
 }
-
-Navbar.defaultProps = {
-    logo: {logo}
-};
-
 export default Navbar

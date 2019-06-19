@@ -2,7 +2,6 @@ import React, { useReducer } from 'react';
 import BookingContext from './bookingContext';
 import BookingReducer from './bookingReducer';
 import {
-    SET_LOADING,
     SET_PICKUP_LOCATION,
     SET_DESTINATION,
     SET_DATE
@@ -48,8 +47,6 @@ const BookingState = (props) => {
             payload: {date}
         })
     }
-
-    const setLoading = () => dispatch({ type: SET_LOADING });
 
     return <BookingContext.Provider
         value={{

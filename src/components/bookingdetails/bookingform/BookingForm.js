@@ -1,6 +1,7 @@
 import React, {useState, useContext} from 'react';
-import DetailsInput from './DetailsInput';
-import DateInput from './DateInput';
+import LocationInput from './location/LocationInput';
+import StandardInput from './StandardInput';
+import TimeInput from './date/TimeInput';
 import BookingContext from '../../../context/booking/bookingContext';
 
 const BookingForm = () => {
@@ -22,27 +23,25 @@ const BookingForm = () => {
 
     return (
         <ul className='booking-grid'>
-            <li><DetailsInput 
+            <li><LocationInput
                 label={'Pick up:'} 
                 name={'pickup'} 
                 placeholder={'e.g. Torstrasse 123, Berlin'}
-                usesGooglePlaces={true}
                 changeHandler={pickupChangeHandler}     
                 
                  /></li>
-            <li><DetailsInput 
+            <li><LocationInput
                 label={'Destination:'} 
                 name={'destination'} 
-                placeholder={'e.g. Kitkat'}
-                usesGooglePlaces={true} 
+                placeholder={'e.g. KitKatClub'}
                 changeHandler={destinationChangeHandler}
                 /></li>
-            <li><DateInput/></li>
-            <li><DetailsInput 
+            <li><TimeInput/></li>
+            <li><StandardInput
+                className={'input-2'}
                 label={'Voucher code (optional):'} 
                 name={'voucher'} 
-                placeholder={''}
-                usesGooglePlaces={false} /></li>
+                placeholder={''}/></li>
         </ul>
     )
 }

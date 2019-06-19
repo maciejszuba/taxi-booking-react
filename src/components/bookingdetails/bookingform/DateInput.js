@@ -1,4 +1,5 @@
 import React, {useState, useContext} from 'react';
+import Calendar from './date/Calendar';
 import BookingContext from '../../../context/booking/bookingContext';
 
 const DateInput = () => {
@@ -38,6 +39,8 @@ const DateInput = () => {
                 <span>Friday</span>
             </label>
             <input className='radio' type="radio" name="date" id="date_pick_second_day" value='21.06'/>
+
+            <Calendar/>
 
         </div>
     )

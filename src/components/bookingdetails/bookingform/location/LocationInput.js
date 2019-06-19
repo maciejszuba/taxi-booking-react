@@ -1,8 +1,9 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import scriptLoader from 'react-async-script-loader'
+import scriptLoader from 'react-async-script-loader';
+import arrow from '../../../../img/arrow-down.svg';
 
-class DetailsInput extends React.Component {
+class LocationInput extends React.Component {
 
   componentWillReceiveProps({ isScriptLoaded, isScriptLoadSucceed }) {
     if (isScriptLoaded && !this.props.isScriptLoaded) { // load finished
@@ -22,7 +23,7 @@ class DetailsInput extends React.Component {
 
 
   render() {
-    const { label, name, placeholder, usesGooglePlaces, changeHandler } = this.props;
+    const { label, name, placeholder, changeHandler } = this.props;
 
     return (
       <>
@@ -39,11 +40,13 @@ class DetailsInput extends React.Component {
             id={name}
             placeholder={placeholder}
             onChange={changeHandler}
-    
+
           />
 
-         { usesGooglePlaces ? <div className={'google-autocomplete'}></div> : null }
-
+          <div className='google-autocomplete'>
+            <img src={arrow} alt=""/>
+          </div>
+    
         </div >
       </>
     )
@@ -54,5 +57,5 @@ export default scriptLoader(
   [
     'https://maps.googleapis.com/maps/api/js?key=AIzaSyBwKqh6eN91t7znLNyZdUVstD-BoQ_n9RA&libraries=places'
   ]
-)(DetailsInput)
+)(LocationInput)
 // export default DetailsInput

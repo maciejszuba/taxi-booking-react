@@ -61,7 +61,6 @@ li {
 }
 
 .booking-grid {
-  height: 35vh;
   display: flex;
   flex-direction: column;
 }
@@ -117,6 +116,7 @@ li {
     display: flex;
     flex-direction: column;
     border-radius: 10px;
+    max-width: 500px;
 }
 
 .label-1 {
@@ -124,10 +124,10 @@ li {
   height: 100%;
   opacity: .5;
   font-size: 1.2rem;
-  padding: 0 .5rem;
+  padding: .5rem .5rem;
 }
 
-.input-1 {
+.input-1, .input-2 {
   display: inline-block;
   height: 100%;
   border: none;
@@ -143,18 +143,55 @@ li {
   }
 }
 
+.input-2 {
+  height: 50px;
+  max-width: 220px;
+
+  & > label{
+    padding: 0;
+  }
+}
+
+#hour{
+  max-width: 100px;
+}
+
 .google-autocomplete {
+    position: relative;
     height: 50px;
     width: 50px;
-    background-color: pink;
+    background-color: var(--font-color);
+    padding: 1rem .2rem;
+
+    &>img {
+      opacity: .5;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 90%;
+      background-color: gray;
+      left: 0;
+      top: 5%;
+      opacity: .3;
+    }
+}
+
+.timeinput{
+  display: flex;
+  justify-content: space-between;
 }
 
 .date-picker {
   display: flex;
+  justify-content: space-between;
   background-color: white;
   border-radius: 5px;
   color: var(--bcg-color);
   margin-bottom: 2px;
+  margin-right: 2px;
 }
 
 .radio{
@@ -162,7 +199,7 @@ li {
 }
 
 .radiobtn-cover{
-  width: 100px;
+  width: 90px;
   height: 50px;
   text-align: center;
   position: relative;
@@ -202,4 +239,43 @@ li {
         left: .6rem;
         top: 50%;
     }
+}
+
+.calendar-btn {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  padding: .6rem;
+
+  & > img{
+    height: 100%;
+    width: 100%;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 90%;
+    background-color: gray;
+    left: 0;
+    top: 5%;
+    opacity: .3;
+  }
+}
+
+.submit {
+  height: 70px;
+  background-color: var(--primary-color);
+  color: var(--font-color);
+  font-size: 1.7rem;
+  text-align: center;
+  padding: .8rem;
+  user-select: none;
+
+  &:active {
+    background-color: var(--font-color);
+    color: var(--primary-color);
+  }  
+
 }

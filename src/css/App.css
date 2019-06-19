@@ -20,7 +20,7 @@ li { list-style: none; }
 
 .steps > li { padding: 0 1rem; }
 
-.booking-grid { height: 35vh; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+.booking-grid { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
 
 .booking-form-element { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; border-radius: 4px; background-color: white; color: var(--bcg-color); margin-bottom: 2px; }
 
@@ -34,27 +34,39 @@ li { list-style: none; }
 .steps-number { display: inline-block; width: 2rem; height: 2rem; font-size: 1.2rem; line-height: 1.5rem; border: 3px solid var(--primary-color); border-radius: 50%; text-align: center; margin-right: .5rem; }
 
 /* FORMS */
-.booking-main-menu { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; border-radius: 10px; }
+.booking-main-menu { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; border-radius: 10px; max-width: 500px; }
 
-.label-1 { display: inline-block; height: 100%; opacity: .5; font-size: 1.2rem; padding: 0 .5rem; }
+.label-1 { display: inline-block; height: 100%; opacity: .5; font-size: 1.2rem; padding: .5rem .5rem; }
 
-.input-1 { display: inline-block; height: 100%; border: none; font-size: 1.2rem; line-height: 2rem; padding: 0 .5rem; width: auto; -webkit-box-flex: 2; -ms-flex-positive: 2; flex-grow: 2; padding-right: 1rem; }
+.input-1, .input-2 { display: inline-block; height: 100%; border: none; font-size: 1.2rem; line-height: 2rem; padding: 0 .5rem; width: auto; -webkit-box-flex: 2; -ms-flex-positive: 2; flex-grow: 2; padding-right: 1rem; }
 
-.input-1::-webkit-input-placeholder { opacity: .5; }
+.input-1::-webkit-input-placeholder, .input-2::-webkit-input-placeholder { opacity: .5; }
 
-.input-1:-ms-input-placeholder { opacity: .5; }
+.input-1:-ms-input-placeholder, .input-2:-ms-input-placeholder { opacity: .5; }
 
-.input-1::-ms-input-placeholder { opacity: .5; }
+.input-1::-ms-input-placeholder, .input-2::-ms-input-placeholder { opacity: .5; }
 
-.input-1::placeholder { opacity: .5; }
+.input-1::placeholder, .input-2::placeholder { opacity: .5; }
 
-.google-autocomplete { height: 50px; width: 50px; background-color: pink; }
+.input-2 { height: 50px; max-width: 220px; }
 
-.date-picker { display: -webkit-box; display: -ms-flexbox; display: flex; background-color: white; border-radius: 5px; color: var(--bcg-color); margin-bottom: 2px; }
+.input-2 > label { padding: 0; }
+
+#hour { max-width: 100px; }
+
+.google-autocomplete { position: relative; height: 50px; width: 50px; background-color: var(--font-color); padding: 1rem .2rem; }
+
+.google-autocomplete > img { opacity: .5; }
+
+.google-autocomplete::before { content: ''; position: absolute; width: 2px; height: 90%; background-color: gray; left: 0; top: 5%; opacity: .3; }
+
+.timeinput { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+
+.date-picker { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; background-color: white; border-radius: 5px; color: var(--bcg-color); margin-bottom: 2px; margin-right: 2px; }
 
 .radio { display: none; }
 
-.radiobtn-cover { width: 100px; height: 50px; text-align: center; position: relative; font-size: .8rem; text-align: left; padding: .3rem 0 0 1.5rem; }
+.radiobtn-cover { width: 90px; height: 50px; text-align: center; position: relative; font-size: .8rem; text-align: left; padding: .3rem 0 0 1.5rem; }
 
 .radiobtn-cover > span { display: block; }
 
@@ -63,4 +75,14 @@ li { list-style: none; }
 .date-choice::before { content: ''; position: absolute; width: 3px; height: 70%; background-color: var(--primary-color); left: .6rem; }
 
 .date-choice::after { content: ''; position: absolute; background-color: white; width: 8px; height: 8px; border-top: var(--primary-color) 3px solid; border-right: var(--primary-color) 3px solid; -webkit-transform: rotate(45deg) translate(-70%, -25%); transform: rotate(45deg) translate(-70%, -25%); left: .6rem; top: 50%; }
+
+.calendar-btn { position: relative; width: 50px; height: 50px; padding: .6rem; }
+
+.calendar-btn > img { height: 100%; width: 100%; }
+
+.calendar-btn::before { content: ''; position: absolute; width: 3px; height: 90%; background-color: gray; left: 0; top: 5%; opacity: .3; }
+
+.submit { height: 70px; background-color: var(--primary-color); color: var(--font-color); font-size: 1.7rem; text-align: center; padding: .8rem; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+
+.submit:active { background-color: var(--font-color); color: var(--primary-color); }
 /*# sourceMappingURL=App.css.map */

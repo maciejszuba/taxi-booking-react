@@ -1,6 +1,6 @@
 import React from 'react'
 
-const DetailsAndMap = () => {
+const DetailsAndMap = ({pickupLocation, destination, date, hour}) => {
     return (
         <div className={'bill-and-map'}>
             
