@@ -2,16 +2,10 @@ import React from 'react'
 
 const DetailsAndMap = () => {
     return (
-        <div style = {style}>
+        <div className={'bill-and-map'}>
             
         </div>
     )
-}
-
-const style = {
-    backgroundColor : 'green',
-    gridRow: '2',
-    gridColumn: '4 / span 2',
 }
 
 export default DetailsAndMap

@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+/* VARIABLES */
+:root {
+    --bcg-color: #081c31;
+    --primary-color: #FF4800;
+    --secondary-color: #2b4a6b;
+    --font-color: #ffffff;
+    --dark-color: #dc3545;
+    --success-color: #28a745;
+  }
+
+/* GLOBAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    background-color: var(--bcg-color);
+    color: var(--font-color);
+  }
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none
+}
+
+/* LAYOUT */
+
+.container {
+  max-width: 60%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.first-layout {
+  display: grid;
+  grid: 15vh 70vh / repeat(3, 1fr);
+  grid-gap: 1rem;
+  padding: 0 4rem;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  grid-column: 1 / span 5;
+  padding: 1rem 0;
+
+  &>li{
+    padding: 0 1rem;
+  }
+}
+
+.booking-grid {
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-form-element {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+  background-color: white;
+  color: var(--bcg-color);
+  margin-bottom: 2px;
+}
+
+.bill-and-map{
+    background-color : green;
+    grid-row: 2;
+    grid-column: 2 / span 2;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    padding: .5rem 2rem;
+    width: 100%;
+    margin: 0 auto;
+
+    & > img {
+        width: 140px;
+    }
+  }
+
+// STEPS
+
+.steps-number{
+    display: inline-block; 
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    border: 3px solid var(--primary-color); 
+    border-radius : 50%;
+    text-align: center;
+    margin-right: .5rem;
+}
+
+/* FORMS */
+
+.booking-main-menu {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.label-1 {
+  display: inline-block;
+  height: 100%;
+  opacity: .5;
+  font-size: 1.2rem;
+  padding: 0 .5rem;
+}
+
+.input-1 {
+  display: inline-block;
+  height: 100%;
+  border: none;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  padding: 0 .5rem;
+  width: auto;
+  flex-grow: 2;
+  padding-right: 1rem;
+
+  &::placeholder {
+    opacity: .5;
+  }
+}
+
+.google-autocomplete {
+    height: 50px;
+    width: 50px;
+    background-color: pink;
+}
+
+.date-picker {
+  display: flex;
+  background-color: white;
+  border-radius: 5px;
+  color: var(--bcg-color);
+  margin-bottom: 2px;
+}
+
+.radio{
+  display: none;
+}
+
+.radiobtn-cover{
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  position: relative;
+  font-size: .8rem;
+  text-align: left;
+  padding: .3rem 0 0 1.5rem;
+
+  & > span{
+    display: block;
+
+    &:first-child{
+        font-size: .7rem;
+        font-weight: bold;
+    }
+  }
+}
+
+.date-choice{
+    &::before{
+        content: '';
+        position: absolute;
+        width: 3px;
+        height: 70%;
+        background-color: var(--primary-color);
+        left: .6rem;
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        background-color: white;
+        width: 8px;
+        height: 8px;
+        border-top: var(--primary-color) 3px solid;
+        border-right: var(--primary-color) 3px solid;
+        transform: rotate(45deg) translate(-70%, -25%);
+        left: .6rem;
+        top: 50%;
+    }
+}

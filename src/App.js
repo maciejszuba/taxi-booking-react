@@ -2,9 +2,9 @@ import React from 'react';
 import BookingState from './context/booking/BookingState';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
-import WhereAndWhen from './components/whereandwhen/WhereAndWhen';
+import BookingDetails from './components/bookingdetails/BookingDetails';
 
-import './App.css';
+import './css/App.css';
 
 
 const App = () => {
@@ -13,7 +13,7 @@ const App = () => {
       <BrowserRouter>
         <Navbar />
         <Switch>
-          <Route exact path='/' component={WhereAndWhen} />
+          <Route exact path='/' component={BookingDetails} />
 
         </Switch>
 

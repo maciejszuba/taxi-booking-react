@@ -4,7 +4,6 @@ import React from 'react';
 import logo from '../../img/talixo_logo_2x.png';
 
 const Navbar = ({logo}) => {
-    console.log(logo);
     return (
         <nav className='navbar container'>
             <img src={require('../../img/talixo_logo_2x.png')} alt="Talixo"/>
