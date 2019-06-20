@@ -2,6 +2,7 @@ import React from 'react'
 import BookingForm from './BookingForm';
 
 const BookingMain = () => {
+
     return (
         <div className = {'booking-main-menu'}>
             <h1>Update your route</h1>

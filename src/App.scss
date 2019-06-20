@@ -79,6 +79,7 @@ li {
     background-color : green;
     grid-row: 2;
     grid-column: 2 / span 2;
+    width: 300px;
 }
 
 /* NAVBAR */
@@ -278,4 +279,8 @@ li {
     color: var(--primary-color);
   }  
 
+}
+
+#map{
+  height: 200px;
 }
